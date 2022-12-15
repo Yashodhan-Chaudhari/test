@@ -1,0 +1,6 @@
+hello git,
+
+I am new in git bash
+
+thank u
+yashodhan
