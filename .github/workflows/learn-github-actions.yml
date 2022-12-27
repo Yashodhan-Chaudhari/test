@@ -2,12 +2,24 @@ name: learn-github-actions
 on:
   workflow_dispatch:
     inputs:
+      varify_name:
+        default: yashodhan
+      varify_password:
+        default: yash@123
       name:
         description: enter your name
-        required: true
-    
+      password:
+        description: enter password
+
 jobs:
-  check-bats-version:
+  job1:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo "hello ${{ github.event.inputs.name }}"
+      - run: echo "you entered name':' ${{ github.event.inputs.name }}"
+      - run: echo "you entered name':' ${{ github.event.inputs.password }}"
+  
+  job2:
+    if: github.event.inputs.verify_name == github.event.inputs.name && github.event.inputs.verify_password == github.event.inputs.password
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo "hello ${{ github.event.inputs.name }}, your vallid user"
