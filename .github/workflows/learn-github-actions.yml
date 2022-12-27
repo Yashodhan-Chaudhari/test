@@ -9,4 +9,4 @@ on:
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-    steps: [run: echo "hello world"]
+    steps: [run: echo "${{ github.event.inputs.name }}"]
