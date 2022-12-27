@@ -1,7 +1,12 @@
 name: learn-github-actions
-on: [push]
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: enter your name
+        required: true
+    
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
-    steps:
-      - run: echo "hello world"
+    steps: [run: echo "hello world"]
