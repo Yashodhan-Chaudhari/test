@@ -1,0 +1,11 @@
+name: schedule-massage
+on:
+  schedule:
+    - cron: '1 * * * *'
+  workflow_dispatch:
+    
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "wake up sid!!"
