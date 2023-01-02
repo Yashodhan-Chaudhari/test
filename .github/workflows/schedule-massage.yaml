@@ -4,9 +4,8 @@ on:
   schedule:
     - cron: '1 * * * *'
     
-    
 jobs:
-  schedule-job:
+  job1:
     runs-on: ubuntu-latest
     steps:
       - run: echo 'wake up sid!!'
