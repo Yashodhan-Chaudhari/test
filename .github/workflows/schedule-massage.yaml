@@ -1,9 +1,12 @@
+name: schedule-massage
+
 on:
   schedule:
     - cron: '1 * * * *'
     
     
-job: 
-  runs-on: ubuntu-latest
-  steps:
-    - run: echo 'wake up sid!!'
+jobs:
+  schedule-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'wake up sid!!'
